@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+</head>
+
+<body>
+    <div>
+        <form>
+            <fieldset>
+                <legend>填充内容：</legend>
+                <div>
+                    <input type="radio" id="xss" name="mode" value="111" />
+                    <label for="xss">XSS跨站脚本</label>
+                    </br>
+                    <input type="radio" id="sql" name="mode" value="222" />
+                    <label for="sql">SQL注入代码</label>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+<script src="popup.js"></script>
+</body>
+
+</html>

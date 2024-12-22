@@ -1,0 +1,53 @@
+{
+    "manifest_version": 2,
+    "name": "XSSFiller",
+    "version": "1.0.0",
+    "description": "在所有文本输入框内填充XSS代码",
+    "author": "id88",
+    "homepage_url": "https://github.com/id88/XSSFiller",
+    "icons": {
+        "16": "images/injector16x16.png",
+        "32": "images/injector32x32.png",
+        "64": "images/injector64x64.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "images/injector16x16.png",
+            "32": "images/injector32x32.png",
+            "64": "images/injector64x64.png"
+        },
+        "default_title": "XSS填充器",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "content.css"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs",
+        "contextMenus",
+        "<all_urls>",
+        "scripting"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "XSSFiller@github.com"
+        }
+    }
+}
